@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block mainContaint %}
+<h1>hiii {{certificateObj.serialno}}</h1>
+<ul>
+    <li>Serial No. : {{certificateObj.serialno}} </li>
+    <li>Issue Date : {{certificateObj.issuingdate}}</li>
+    <li>Valid Till : {{certificateObj.validtill}}</li>
+  </ul>
+{% endblock %}

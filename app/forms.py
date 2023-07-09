@@ -1,5 +1,12 @@
 from django import forms
+from . import models
+from django.forms import TextInput, DateField
+
+class CertificateForm(forms.Form):
+    serialno = forms.CharField(max_length=250, required=True)
+    issuingdate = forms.DateField(required=True)
+    validtill = forms.DateField(required=True)
 
 
-class cerificateForm(forms.Form):
-    your_name = forms.CharField(label="Your name", max_length=100)
+class CheckCertForm(forms.Form):
+    serialno = forms.CharField(max_length=250, required=True)

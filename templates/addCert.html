@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block css %}
+  <style>
+    .addCertForm{
+
+      margin-top: 100px;
+      height: 500px;
+      padding: 100px 0px;
+    }
+    .addcert-btn{
+        padding: 20px 42px;
+    }
+  </style>
+{% endblock %}
+{% block mainContaint %}
+      <div class="container">
+        <div class="row justify-content-center addCertForm">
+            <div class="col-xl-6 col-lg-7 col-md-10">
+                <form method="post">
+                    {% csrf_token %} 
+                <label for="id_serialno">Serialno:</label>
+                <input type="text" name="serialno" maxlength="250" required="" id="id_serialno">
+                <br>
+                <label for="id_issuingdate">Issuingdate:</label>
+                <input type="date" name="issuingdate" required="" id="id_issuingdate">
+                <br>
+                <label for="id_validtill">Validtill:</label>
+                <input type="date" name="validtill" required="" id="id_validtill">
+                <br>
+                <button class="btn addcert-btn" type="submit" > add Cert</button>
+                </form>
+              </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+{% endblock %}
